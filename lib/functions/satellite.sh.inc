@@ -373,12 +373,12 @@ disable_chattr() {
 # Read or create Octopus cnf file.
 satellite_cnf() {
   if [ ! -e "${octCnf}" ]; then
-    if [[ "${_MY_EMAIL}" =~ "omega8.cc" ]] \
-      || [[ "${_CLIENT_EMAIL}" =~ "omega8.cc" ]]; then
+    if [[ "${_MY_EMAIL}" =~ "netdream.it" ]] \
+      || [[ "${_CLIENT_EMAIL}" =~ "netdream.it" ]]; then
       _CHECK_HOST=$(uname -n 2>&1)
       if [ -e "/root/.auto.up.cnf" ] \
-        || [ -e "/root/.host8.cnf" ] \
-        || [[ "${_CHECK_HOST}" =~ ".host8." ]] \
+        || [ -e "/root/.netdream.cnf" ] \
+        || [[ "${_CHECK_HOST}" =~ ".netdream." ]] \
         || [[ "${_CHECK_HOST}" =~ ".boa.io" ]] \
         || [ "${_VMFAMILY}" = "VS" ]; then
         _DO_NOTHING=YES
@@ -2385,8 +2385,7 @@ satellite_if_add_update_user_symlinks() {
     ln -sf ${_ROOT}/clients ${_USER_HD}/clients
   fi
   rm -f -r ${_ROOT}/clients/admin &> /dev/null
-  rm -f -r ${_ROOT}/clients/omega8ccgmailcom &> /dev/null
-  rm -f -r ${_ROOT}/clients/nocomega8cc &> /dev/null
+  rm -f -r ${_ROOT}/clients/netdream &> /dev/null
   rm -f -r ${_ROOT}/clients/*/backups &> /dev/null
   symlinks -dr ${_ROOT}/clients &> /dev/null
 }

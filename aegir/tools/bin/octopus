@@ -160,11 +160,11 @@ send_report() {
   if [ -e "${barCnf}" ]; then
     source ${barCnf}
     if [ -e "/root/.auto.up.cnf" ] \
-      || [ -e "/root/.host8.cnf" ] \
-      || [[ "${_CHECK_HOST}" =~ ".host8." ]] \
+      || [ -e "/root/.netdream.cnf" ] \
+      || [[ "${_CHECK_HOST}" =~ ".netdream." ]] \
       || [[ "${_CHECK_HOST}" =~ ".boa.io" ]] \
       || [ "${_L_VMFAMILY}" = "VS" ]; then
-      _MY_EMAIL="$(basename "$0")@omega8.cc"
+      _MY_EMAIL="$(basename "$0")@netdream.it"
     fi
     if [ ! -z "${_MY_EMAIL}" ]; then
       repSub="Successful Octopus upgrade for ${octUsr}"
@@ -180,11 +180,11 @@ send_alert() {
   if [ -e "${barCnf}" ]; then
     source ${barCnf}
     if [ -e "/root/.auto.up.cnf" ] \
-      || [ -e "/root/.host8.cnf" ] \
-      || [[ "${_CHECK_HOST}" =~ ".host8." ]] \
+      || [ -e "/root/.netdream.cnf" ] \
+      || [[ "${_CHECK_HOST}" =~ ".netdream." ]] \
       || [[ "${_CHECK_HOST}" =~ ".boa.io" ]] \
       || [ "${_L_VMFAMILY}" = "VS" ]; then
-      _MY_EMAIL="$(basename "$0")@omega8.cc"
+      _MY_EMAIL="$(basename "$0")@netdream.it"
     fi
     if [ ! -z "${_MY_EMAIL}" ]; then
       repSub="ALERT: Failed Octopus upgrade for ${octUsr} on ${_CHECK_HOST}"

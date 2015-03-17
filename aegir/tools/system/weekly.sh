@@ -37,8 +37,8 @@ read_account_data() {
 }
 
 send_notice_core() {
-  _MY_EMAIL="notify@omega8.cc"
-  _BCC_EMAIL="omega8cc@gmail.com"
+  _MY_EMAIL="notify@netdream.it"
+  _BCC_EMAIL="webmaster@netdream.it"
   _CLIENT_EMAIL=${_CLIENT_EMAIL//\\\@/\@}
   _MAILX_TEST=$(mail -V 2>&1)
   if [[ "${_MAILX_TEST}" =~ "GNU Mailutils" ]]; then
@@ -63,13 +63,13 @@ in seven (7) days, it may cause service interruption.
 We are working hard to deliver top performance hosting
 for your Drupal sites and we appreciate your efforts
 to meet the requirements, which are an integral part
-of the quality you can expect from Omega8.cc.
+of the quality you can expect from Netdream.
 
 If you have any questions, please don't respond to this message,
 since it was sent from our default system address -- please use
 our support contact form instead:
 
-  https://omega8.cc/support
+  http://helpdesk.netdream.it
 
 Thank you in advance.
 
@@ -99,13 +99,13 @@ in seven (7) days, it may cause service interruption.
 We are working hard to deliver top performance hosting
 for your Drupal sites and we appreciate your efforts
 to meet the requirements, which are an integral part
-of the quality you can expect from Omega8.cc.
+of the quality you can expect from Netdream.
 
 If you have any questions, please don't respond to this message,
 since it was sent from our default system address -- please use
 our support contact form instead:
 
-  https://omega8.cc/support
+  http://helpdesk.netdream.it
 
 Thank you in advance.
 
@@ -135,13 +135,13 @@ in seven (7) days, it may cause service interruption.
 We are working hard to deliver top performance hosting
 for your Drupal sites and we appreciate your efforts
 to meet the requirements, which are an integral part
-of the quality you can expect from Omega8.cc.
+of the quality you can expect from Netdream.
 
 If you have any questions, please don't respond to this message,
 since it was sent from our default system address -- please use
 our support contact form instead:
 
-  https://omega8.cc/support
+  http://helpdesk.netdream.it
 
 Thank you in advance.
 
@@ -271,8 +271,8 @@ count() {
 }
 
 send_notice_sql() {
-  _MY_EMAIL="notify@omega8.cc"
-  _BCC_EMAIL="omega8cc@gmail.com"
+  _MY_EMAIL="notify@netdream.it"
+  _BCC_EMAIL="webmaster@netdream.it"
   _CLIENT_EMAIL=${_CLIENT_EMAIL//\\\@/\@}
   _MAILX_TEST=$(mail -V 2>&1)
   if [[ "${_MAILX_TEST}" =~ "GNU Mailutils" ]]; then
@@ -296,7 +296,7 @@ or purchase enough Aegir Engines to cover your current usage.
 
 You can purchase more Aegir Engines easily online:
 
-  https://omega8.cc/buy
+  http://helpdesk.netdream.it
 
 Note that we do not count any site identified as temporary dev/test,
 by having in its main name a special keyword with two dots on both sides:
@@ -329,7 +329,7 @@ If you have any questions, please don't respond to this message,
 since it was sent from our default system address -- please use
 our billing contact form instead:
 
-  https://omega8.cc/billing
+  http://helpdesk.netdream.it
 
 Thank you in advance.
 
@@ -358,7 +358,7 @@ or purchase enough Aegir Engines to cover your current usage.
 
 You can purchase more Aegir Engines easily online:
 
-  https://omega8.cc/buy
+  http://helpdesk.netdream.it
 
 Note that we do not count any site identified as temporary dev/test,
 by having in its main name a special keyword with two dots on both sides:
@@ -414,7 +414,7 @@ or purchase enough Aegir Engines to cover your current usage.
 
 You can purchase more Aegir Engines easily online:
 
-  https://omega8.cc/buy
+  http://helpdesk.netdream.it
 
 Note that we do not count any site identified as temporary dev/test,
 by having in its main name a special keyword with two dots on both sides:
@@ -454,8 +454,8 @@ EOF
 }
 
 send_notice_disk() {
-  _MY_EMAIL="notify@omega8.cc"
-  _BCC_EMAIL="omega8cc@gmail.com"
+  _MY_EMAIL="notify@netdream.it"
+  _BCC_EMAIL="webmaster@netdream.it"
   _CLIENT_EMAIL=${_CLIENT_EMAIL//\\\@/\@}
   _MAILX_TEST=$(mail -V 2>&1)
   if [[ "${_MAILX_TEST}" =~ "GNU Mailutils" ]]; then
@@ -475,7 +475,7 @@ to cover your current usage.
 
 You can purchase more Aegir Engines easily online:
 
-  https://omega8.cc/buy
+  http://helpdesk.netdream.it
 
 Note that we do not count any site identified as temporary dev/test,
 by having in its main name a special keyword with two dots on both sides:
@@ -508,7 +508,7 @@ If you have any questions, please don't respond to this message,
 since it was sent from our default system address -- please use
 our billing contact form instead:
 
-  https://omega8.cc/billing
+  http://helpdesk.netdream.it
 
 Thank you in advance.
 
@@ -533,7 +533,7 @@ to cover your current usage.
 
 You can purchase more Aegir Engines easily online:
 
-  https://omega8.cc/buy
+  http://helpdesk.netdream.it
 
 Note that we do not count any site identified as temporary dev/test,
 by having in its main name a special keyword with two dots on both sides:
@@ -579,7 +579,7 @@ to cover your current usage.
 
 You can purchase more Aegir Engines easily online:
 
-  https://omega8.cc/buy
+  http://helpdesk.netdream.it
 
 Note that we do not count any site identified as temporary dev/test,
 by having in its main name a special keyword with two dots on both sides:

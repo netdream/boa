@@ -132,11 +132,11 @@ check_dns_settings() {
 send_report() {
   if [ -e "${barCnf}" ]; then
     if [ -e "/root/.auto.up.cnf" ] \
-      || [ -e "/root/.host8.cnf" ] \
-      || [[ "${_CHECK_HOST}" =~ ".host8." ]] \
+      || [ -e "/root/.netdream.cnf" ] \
+      || [[ "${_CHECK_HOST}" =~ ".netdream." ]] \
       || [[ "${_CHECK_HOST}" =~ ".boa.io" ]] \
       || [ "${_L_VMFAMILY}" = "VS" ]; then
-      _MY_EMAIL="$(basename "$0")@omega8.cc"
+      _MY_EMAIL="$(basename "$0")@netdream.it"
     fi
     if [ ! -z "${_MY_EMAIL}" ]; then
       repSub="Successful Barracuda upgrade"
@@ -151,11 +151,11 @@ send_report() {
 send_alert() {
   if [ -e "${barCnf}" ]; then
     if [ -e "/root/.auto.up.cnf" ] \
-      || [ -e "/root/.host8.cnf" ] \
-      || [[ "${_CHECK_HOST}" =~ ".host8." ]] \
+      || [ -e "/root/.netdream.cnf" ] \
+      || [[ "${_CHECK_HOST}" =~ ".netdream." ]] \
       || [[ "${_CHECK_HOST}" =~ ".boa.io" ]] \
       || [ "${_L_VMFAMILY}" = "VS" ]; then
-      _MY_EMAIL="$(basename "$0")@omega8.cc"
+      _MY_EMAIL="$(basename "$0")@netdream.it"
     fi
     if [ ! -z "${_MY_EMAIL}" ]; then
       repSub="${_ALERT_MSG} on ${_CHECK_HOST}"
@@ -513,7 +513,7 @@ up_action() {
           fi
         fi
       fi
-      sed -i "s/^_MY_EMAIL=.*/_MY_EMAIL=\"notify\@omega8.cc\"/g" ${barCnf}
+      sed -i "s/^_MY_EMAIL=.*/_MY_EMAIL=\"notify\@netdream.it\"/g" ${barCnf}
       _THIS_RV=$(lsb_release -sc 2>&1)
       if [ "$_THIS_RV" = "lenny" ] \
         && [ -e "${barCnf}" ]; then

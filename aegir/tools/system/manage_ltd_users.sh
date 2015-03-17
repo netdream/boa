@@ -1418,8 +1418,7 @@ for pthParentUsr in `find /data/disk/ -maxdepth 1 -mindepth 1 | sort`; do
     if [ -e "${pthParentUsr}/clients" ] && [ ! -z ${_USER} ]; then
       echo Managing Users for ${pthParentUsr} Instance
       rm -f -r ${pthParentUsr}/clients/admin &> /dev/null
-      rm -f -r ${pthParentUsr}/clients/omega8ccgmailcom &> /dev/null
-      rm -f -r ${pthParentUsr}/clients/nocomega8cc &> /dev/null
+      rm -f -r ${pthParentUsr}/clients/netdream &> /dev/null
       rm -f -r ${pthParentUsr}/clients/*/backups &> /dev/null
       symlinks -dr ${pthParentUsr}/clients &> /dev/null
       if [ -e "/home/${_USER}.ftp" ]; then

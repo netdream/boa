@@ -280,11 +280,11 @@ if (!$is_backend) {
       header("Connection: close");
       exit;
     }
-    elseif (preg_match("/\.(?:host8|boa)\.(?:biz|io)$/i", $_SERVER['HTTP_HOST'])) {
+    elseif (preg_match("/\.(?:netdream)\.(?:it|net)$/i", $_SERVER['HTTP_HOST'])) {
       // Deny known search bots on some protected CI subdomains
       header('X-Accel-Expires: 60');
       header("HTTP/1.1 301 Moved Permanently");
-      header("Location: https://omega8.cc/");
+      header("Location: http://www.netdream.it");
       header("Connection: close");
       exit;
     }

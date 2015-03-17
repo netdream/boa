@@ -395,7 +395,7 @@ migrate_prepare() {
     if [[ "${_CLIENT_EMAIL}" =~ "@" ]]; then
       _DO_NOTHING=YES
     else
-      _CLIENT_EMAIL="omega8cc@gmail.com"
+      _CLIENT_EMAIL="webmaster@netdream.it"
     fi
     _CLIENT_EMAIL=${_CLIENT_EMAIL//\\\@/\@}
   fi
@@ -403,7 +403,7 @@ migrate_prepare() {
   [ -z "${_CLIENT_OPTION}" ] && _CLIENT_OPTION=EDGE
   [ -z "${_CLIENT_SUBSCR}" ] && _CLIENT_SUBSCR=M
   [ -z "${_CLIENT_CORES}" ]  && _CLIENT_CORES=1
-  [ -z "${_CLIENT_EMAIL}" ]  && _CLIENT_EMAIL="omega8cc@gmail.com"
+  [ -z "${_CLIENT_EMAIL}" ]  && _CLIENT_EMAIL="webmaster@netdream.it"
 
   echo "_CLIENT_EMAIL is ${_CLIENT_EMAIL}"
   echo "_THIS_HM_USER is ${_THIS_HM_USER}"
@@ -657,8 +657,8 @@ migrate_init() {
       _CHECK_EMAIL=`cat ${_USR}/log/email.txt`
       _CHECK_EMAIL=`echo -n ${_CHECK_EMAIL} | tr -d "\n"`
       _CHECK_EMAIL=${_CHECK_EMAIL//\\\@/\@}
-      if [ "${_CHECK_EMAIL}" = "omega8cc@gmail.com" ] \
-        || [[ "${_CHECK_EMAIL}" =~ "@omega8.cc" ]]; then
+      if [ "${_CHECK_EMAIL}" = "webmaster@netdream.it" ] \
+        || [[ "${_CHECK_EMAIL}" =~ "@netdream.it" ]]; then
         _RESULT_EMAIL=OUR
       else
         _RESULT_EMAIL=OK

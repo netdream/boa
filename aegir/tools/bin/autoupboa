@@ -99,25 +99,25 @@ if [ -e "/data/disk/arch" ]; then
   _AUTO_UP_WEEKLY=${_AUTO_UP_WEEKLY//[^0-9]/}
   _AUTO_UP_MONTH=${_AUTO_UP_MONTH//[^0-9]/}
   _AUTO_UP_DAY=${_AUTO_UP_DAY//[^0-9]/}
-  if [[ "${_MY_EMAIL}" =~ "omega8" ]]; then
+  if [[ "${_MY_EMAIL}" =~ "netdream" ]]; then
     _AUTO_UP=YES
   fi
   if [ -e "/etc/apticron/apticron.conf" ]; then
     sed -i "s/^# be something like.*/# be something like ${_MY_EMAIL}/g" \
       /etc/apticron/apticron.conf
     [ -r "/root/.auto.up.cnf" ] && rm -f /root/.auto.up.cnf
-    _APTICRON_TEST=$(grep "omega8" /etc/apticron/apticron.conf 2>&1)
-    if [[ "$_APTICRON_TEST" =~ "omega8" ]]; then
+    _APTICRON_TEST=$(grep "netdream" /etc/apticron/apticron.conf 2>&1)
+    if [[ "$_APTICRON_TEST" =~ "netdream" ]]; then
       _AUTO_UP=YES
     fi
   fi
   if [ ! -e "/root/.auto.up.cnf" ] && [ "${_AUTO_UP}" = "YES" ]; then
     touch /root/.auto.up.cnf
   fi
-  if [[ "${_CHECK_HOST}" =~ ".host8." ]] \
+  if [[ "${_CHECK_HOST}" =~ ".netdream." ]] \
     || [[ "${_CHECK_HOST}" =~ ".boa.io" ]] \
     || [ "${_VMFAMILY}" = "VS" ] \
-    || [ -e "/root/.host8.cnf" ] \
+    || [ -e "/root/.netdream.cnf" ] \
     || [ "${_AUTO_UP}" = "YES" ]; then
     _AUTO_UP_WEEKLY=6
     _AUTO_UP_MONTH=3

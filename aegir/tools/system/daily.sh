@@ -447,11 +447,11 @@ send_shutdown_notice() {
   else
     _ALRT_EMAIL="${_MY_EMAIL}"
   fi
-  if [[ "${_CHECK_HOST}" =~ ".host8." ]] \
-    || [[ "${_CHECK_HOST}" =~ ".boa.io" ]] \
+  if [[ "${_CHECK_HOST}" =~ ".netdream." ]] \
+    || [[ "${_CHECK_HOST}" =~ ".netdream.net" ]] \
     || [ "${_VMFAMILY}" = "VS" ] \
-    || [ -e "/root/.host8.cnf" ]; then
-    _BCC_EMAIL="omega8cc@gmail.com"
+    || [ -e "/root/.netdream.cnf" ]; then
+    _BCC_EMAIL="webmaster@netdream.it"
   else
     _BCC_EMAIL="${_MY_EMAIL}"
   fi
@@ -580,11 +580,11 @@ send_hacked_alert() {
   else
     _ALRT_EMAIL="${_MY_EMAIL}"
   fi
-  if [[ "${_CHECK_HOST}" =~ ".host8." ]] \
+  if [[ "${_CHECK_HOST}" =~ ".netdream." ]] \
     || [[ "${_CHECK_HOST}" =~ ".boa.io" ]] \
     || [ "${_VMFAMILY}" = "VS" ] \
-    || [ -e "/root/.host8.cnf" ]; then
-    _BCC_EMAIL="omega8cc@gmail.com"
+    || [ -e "/root/.netdream.cnf" ]; then
+    _BCC_EMAIL="webmaster@netdream.it"
   else
     _BCC_EMAIL="${_MY_EMAIL}"
   fi
@@ -2541,8 +2541,7 @@ action() {
           || [[ "${_CHECK_HOST}" =~ ".boa.io" ]] \
           || [ "${_VMFAMILY}" = "VS" ]; then
           rm -f -r ${User}/clients/admin &> /dev/null
-          rm -f -r ${User}/clients/omega8ccgmailcom &> /dev/null
-          rm -f -r ${User}/clients/nocomega8cc &> /dev/null
+          rm -f -r ${User}/clients/netdream &> /dev/null
         fi
         rm -f -r ${User}/clients/*/backups &> /dev/null
         symlinks -dr ${User}/clients &> /dev/null

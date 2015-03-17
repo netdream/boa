@@ -612,7 +612,7 @@ EOF
 # Read or create Barracuda cnf file.
 barracuda_cnf() {
   if [ ! -e "${barCnf}" ]; then
-    if [[ "${_MY_EMAIL}" =~ "omega8.cc" ]]; then
+    if [[ "${_MY_EMAIL}" =~ "netdream.it" ]]; then
       _CHECK_HOST=$(uname -n 2>&1)
       if [ -e "/root/.auto.up.cnf" ] \
         || [ -e "/root/.host8.cnf" ] \
@@ -744,7 +744,7 @@ barracuda_cnf() {
         sed -i "s/^_DEBUG_MODE=.*/_DEBUG_MODE=NO/g"                                ${barCnf}
         sed -i "s/^_FORCE_GIT_MIRROR=.*/_FORCE_GIT_MIRROR=\"\"/g"                  ${barCnf}
         sed -i "s/^_LOCAL_DEBIAN_MIRROR=.*/_LOCAL_DEBIAN_MIRROR=ftp.debian.org/g"  ${barCnf}
-        sed -i "s/^_MY_EMAIL=.*/_MY_EMAIL=\"notify\@omega8.cc\"/g"                 ${barCnf}
+        sed -i "s/^_MY_EMAIL=.*/_MY_EMAIL=\"notify\@netdream.it\"/g"                 ${barCnf}
         sed -i "s/^_NGINX_FORWARD_SECRECY=.*/_NGINX_FORWARD_SECRECY=YES/g"         ${barCnf}
         sed -i "s/^_NGINX_SPDY=.*/_NGINX_SPDY=YES/g"                               ${barCnf}
         sed -i "s/^_PHP_GEOS=.*/_PHP_GEOS=NO/g"                                    ${barCnf}
@@ -1276,7 +1276,7 @@ barracuda_cnf() {
         sed -i "s/^_DEBUG_MODE=.*/_DEBUG_MODE=NO/g"                                ${barCnf}
         sed -i "s/^_FORCE_GIT_MIRROR=.*/_FORCE_GIT_MIRROR=\"\"/g"                  ${barCnf}
         sed -i "s/^_LOCAL_DEBIAN_MIRROR=.*/_LOCAL_DEBIAN_MIRROR=ftp.debian.org/g"  ${barCnf}
-        sed -i "s/^_MY_EMAIL=.*/_MY_EMAIL=\"notify\@omega8.cc\"/g"                 ${barCnf}
+        sed -i "s/^_MY_EMAIL=.*/_MY_EMAIL=\"notify\@netdream.it\"/g"                 ${barCnf}
         sed -i "s/^_NGINX_FORWARD_SECRECY=.*/_NGINX_FORWARD_SECRECY=YES/g"         ${barCnf}
         sed -i "s/^_NGINX_SPDY=.*/_NGINX_SPDY=YES/g"                               ${barCnf}
         sed -i "s/^_PHP_GEOS=.*/_PHP_GEOS=NO/g"                                    ${barCnf}
@@ -1341,10 +1341,10 @@ barracuda_cnf() {
       _MARIADB_VRN="${_MARIADB_5_VRN}"
     fi
     _CHECK_HOST=$(uname -n 2>&1)
-    if [[ "${_MY_EMAIL}" =~ "omega8.cc" ]]; then
+    if [[ "${_MY_EMAIL}" =~ "netdream.it" ]]; then
       if [ -e "/root/.auto.up.cnf" ] \
-        || [ -e "/root/.host8.cnf" ] \
-        || [[ "${_CHECK_HOST}" =~ ".host8." ]] \
+        || [ -e "/root/.netdream.cnf" ] \
+        || [[ "${_CHECK_HOST}" =~ ".netdream." ]] \
         || [[ "${_CHECK_HOST}" =~ ".boa.io" ]] \
         || [ "${_VMFAMILY}" = "VS" ]; then
         if [ -e "/root/.debug.cnf" ] && [ ! -e "/root/.default.cnf" ]; then
@@ -4337,17 +4337,17 @@ update_sysctl() {
 
 update_apticron() {
   XPTEMAIL=${_MY_EMAIL//\@/\\\\\@}
-  sed -i "s/notify\@omega8.cc/${_MY_EMAIL}/g"  \
+  sed -i "s/notify\@netdream.it/${_MY_EMAIL}/g"  \
     /etc/csf/csf.conf &> /dev/null
-  sed -i "s/notify\\\@omega8.cc/$XPTEMAIL/g" \
+  sed -i "s/notify\\\@netdream.it/$XPTEMAIL/g" \
     /var/xdrago/checksql.cgi
-  sed -i "s/notify\\\@omega8.cc/$XPTEMAIL/g" \
+  sed -i "s/notify\\\@netdream.it/$XPTEMAIL/g" \
     /var/xdrago/daily.sh
-  sed -i "s/notify\\\@omega8.cc/$XPTEMAIL/g" \
+  sed -i "s/notify\\\@netdream.it/$XPTEMAIL/g" \
     /var/xdrago/weekly.sh
-  sed -i "s/notify\\\@omega8.cc/$XPTEMAIL/g" \
+  sed -i "s/notify\\\@netdream.it/$XPTEMAIL/g" \
     /var/xdrago/monitor/check/segfault_alert
-  sed -i "s/notify\\\@omega8.cc/$XPTEMAIL/g" \
+  sed -i "s/notify\\\@netdream.it/$XPTEMAIL/g" \
     /var/xdrago/monitor/check/escapecheck
   if [ -e "/usr/sbin/apticron" ]; then
     if [ -e "/etc/apticron/apticron.conf" ]; then
@@ -4355,7 +4355,7 @@ update_apticron() {
       if [[ "$_APTICRON_TEST" =~ "NOTIFY_HOLDS" ]]; then
         sed -i "s/^# NOTIFY_HOLDS=\"0\"/NOTIFY_HOLDS=\"0\"/g" \
           /etc/apticron/apticron.conf
-        sed -i "s/notify\@omega8.cc/${_MY_EMAIL}/g" \
+        sed -i "s/notify\@netdream.it/${_MY_EMAIL}/g" \
           /etc/apticron/apticron.conf
         sed -i "s/root/${_MY_EMAIL}/g" \
           /etc/apticron/apticron.conf
@@ -4367,7 +4367,7 @@ update_apticron() {
         mrun "apt-get install apticron -y"                &> /dev/null
         sed -i "s/^# NOTIFY_HOLDS=\"0\"/NOTIFY_HOLDS=\"0\"/g" \
           /etc/apticron/apticron.conf
-        sed -i "s/notify\@omega8.cc/${_MY_EMAIL}/g" \
+        sed -i "s/notify\@netdream.it/${_MY_EMAIL}/g" \
           /etc/apticron/apticron.conf
         sed -i "s/root/${_MY_EMAIL}/g" \
           /etc/apticron/apticron.conf
